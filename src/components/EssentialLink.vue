@@ -2,8 +2,8 @@
   <q-item
     clickable
     tag="a"
-    target="_blank"
-    :href="link"
+    :to="link"
+    class="text-white"
   >
     <q-item-section
       v-if="icon"
@@ -14,7 +14,7 @@
 
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label class="text-white" caption>{{ caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
