@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md" style="max-width: 300px">
-    <q-input filled name="dateInput" v-model="date" mask="date" :rules="['date']">
+    <q-input filled name="dateInput" v-model="date" mask="date">
       <template v-slot:append>
         <q-icon name="event" class="cursor-pointer">
           <q-popup-proxy cover transition-show="scale" transition-hide="scale">
@@ -16,17 +16,9 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref } from 'vue'
 
-export default {
-  props: {
-    label: String,
-  },
-  setup () {
-    return {
-      date: ref('2019/02/01')
-    }
-  }
-}
+const date = ref();
+
 </script>

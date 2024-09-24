@@ -1,30 +1,23 @@
 <template>
-  <q-number
+  <div>
+    <q-input
+        type="number"
         name="price"
         filled
-        v-model="price"
-        @update:price="onSubmit"
-        :options="{
-          prefix: '',
-          suffix: '',
-          separator: ' ',
-          decimal: '.',
-          precision: 2,
-          prefill: false,
-          reverseFill: false,
-          min: false,
-          max: false,
-          nullValue: '',
-        }"
+        v-model.number="price"
         label="Insert number"
-        :rules="[(val) => !!val || 'Field is required!']"
         input-class="text-left"
       />
+      <p>{{ inputNumbers }}</p>
+  </div>
 </template>
-<script>
-export default {
-  setup() {
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 
-  },
-}
+
+
+  const price = ref();
+  const inputNumbers = computed(() =>{
+    return new Intl.NumberFormat('cz').format(price.value)
+  });
 </script>
