@@ -13,8 +13,8 @@
 
         <q-toolbar-title>
           <div class="absolute-center">
-          <q-icon name="savings" />
-          Input gather's App
+            <q-icon name="savings" />
+            Input gather's App
           </div>
         </q-toolbar-title>
       </q-toolbar>
@@ -27,12 +27,7 @@
       bordered
     >
       <q-list>
-        <q-item-label
-          class="text-white"
-          header
-        >
-          Essential Links
-        </q-item-label>
+        <q-item-label class="text-white" header> Essential Links </q-item-label>
 
         <EssentialLink
           v-for="link in linksList"
@@ -50,10 +45,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue';
+import EssentialLink, {
+  EssentialLinkProps,
+} from 'components/EssentialLink.vue';
 
 defineOptions({
-  name: 'MainLayout'
+  name: 'MainLayout',
 });
 
 const linksList: EssentialLinkProps[] = [
@@ -61,19 +58,25 @@ const linksList: EssentialLinkProps[] = [
     title: 'Home',
     caption: 'ah home sweet home',
     icon: 'school',
-    link: '/'
+    link: '/',
   },
   {
     title: 'Input',
     caption: 'go to input page',
     icon: 'code',
-    link: '/input'
+    link: '/input',
+  },
+  {
+    title: 'Input2',
+    caption: 'Better input',
+    icon: 'code',
+    link: '/input2',
   },
 ];
 
 const leftDrawerOpen = ref(false);
 
-function toggleLeftDrawer () {
+function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>

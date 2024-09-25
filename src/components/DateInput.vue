@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md" style="max-width: 300px">
-    <q-input name="dateInput" filled v-model="dateRef" mask="##/##/####" :rules="[v => /^[0-3]\d\/[0-1]\d\/-?[\d]+$/
+    <q-input name="dateInput" label="DD/MM/YYYY" filled v-model="dateRef" mask="##/##/####" :rules="[v => /^[0-3]\d\/[0-1]\d\/-?[\d]+$/
       .test(v) ||'Please enter valid date']">
       <template v-slot:append>
         <q-icon name="event" class="cursor-pointer">
