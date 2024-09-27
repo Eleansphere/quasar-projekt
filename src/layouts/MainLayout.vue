@@ -62,13 +62,13 @@ const linksList: EssentialLinkProps[] = [
   },
   {
     title: 'Input',
-    caption: 'go to input page',
+    caption: 'reseni pomoci q-number',
     icon: 'code',
     link: '/input',
   },
   {
     title: 'Input2',
-    caption: 'Better input',
+    caption: 'reseni q-input',
     icon: 'code',
     link: '/input2',
   },
